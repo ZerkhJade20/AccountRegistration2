@@ -52,7 +52,16 @@ namespace AccountRegistration2
         private void textBox1_TextChanged(object sender, EventArgs e)
         { }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             // Assign textbox/combobox values to static variables
             StudentInfoClass.Program = cboProgram.Text;
@@ -72,14 +81,6 @@ namespace AccountRegistration2
                 MessageBox.Show("Registration confirmed!", "Success");
             }
         }
-
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-}  
+}
 

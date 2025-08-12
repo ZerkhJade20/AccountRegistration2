@@ -124,72 +124,64 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(174, 296);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(44, 16);
+            this.lblAddress.Size = new System.Drawing.Size(0, 16);
             this.lblAddress.TabIndex = 15;
-            this.lblAddress.Text = "label9";
             // 
             // lblContactNo
             // 
             this.lblContactNo.AutoSize = true;
             this.lblContactNo.Location = new System.Drawing.Point(174, 260);
             this.lblContactNo.Name = "lblContactNo";
-            this.lblContactNo.Size = new System.Drawing.Size(51, 16);
+            this.lblContactNo.Size = new System.Drawing.Size(0, 16);
             this.lblContactNo.TabIndex = 14;
-            this.lblContactNo.Text = "label10";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(174, 224);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(51, 16);
+            this.lblAge.Size = new System.Drawing.Size(0, 16);
             this.lblAge.TabIndex = 13;
-            this.lblAge.Text = "label11";
             // 
             // lblMiddleName
             // 
             this.lblMiddleName.AutoSize = true;
             this.lblMiddleName.Location = new System.Drawing.Point(174, 183);
             this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.Size = new System.Drawing.Size(51, 16);
+            this.lblMiddleName.Size = new System.Drawing.Size(0, 16);
             this.lblMiddleName.TabIndex = 12;
-            this.lblMiddleName.Text = "label12";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(174, 139);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(51, 16);
+            this.lblFirstName.Size = new System.Drawing.Size(0, 16);
             this.lblFirstName.TabIndex = 11;
-            this.lblFirstName.Text = "label13";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Location = new System.Drawing.Point(174, 102);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(51, 16);
+            this.lblLastName.Size = new System.Drawing.Size(0, 16);
             this.lblLastName.TabIndex = 10;
-            this.lblLastName.Text = "label14";
             // 
             // lblProgram
             // 
             this.lblProgram.AutoSize = true;
             this.lblProgram.Location = new System.Drawing.Point(174, 63);
             this.lblProgram.Name = "lblProgram";
-            this.lblProgram.Size = new System.Drawing.Size(51, 16);
+            this.lblProgram.Size = new System.Drawing.Size(0, 16);
             this.lblProgram.TabIndex = 9;
-            this.lblProgram.Text = "label15";
             // 
             // lblStudentNo
             // 
             this.lblStudentNo.AutoSize = true;
             this.lblStudentNo.Location = new System.Drawing.Point(174, 25);
             this.lblStudentNo.Name = "lblStudentNo";
-            this.lblStudentNo.Size = new System.Drawing.Size(51, 16);
+            this.lblStudentNo.Size = new System.Drawing.Size(0, 16);
             this.lblStudentNo.TabIndex = 8;
-            this.lblStudentNo.Text = "label16";
             // 
             // button1
             // 
