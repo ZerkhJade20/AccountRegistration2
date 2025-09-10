@@ -79,17 +79,51 @@ namespace AccountRegistration2
         private void button1_Click_1(object sender, EventArgs e)
         {
             // Assign textbox/combobox values to static variables
-            StudentInfoClass.Program = cboProgram.Text;
-            StudentInfoClass.FirstName = txtFirstName.Text;
-            StudentInfoClass.LastName = txtLastName.Text;
-            StudentInfoClass.MiddleName = txtMiddleName.Text;
-            StudentInfoClass.Birthday = datePickerBirtday.Text;
-            StudentInfoClass.Gender = cbGender.Text;
+            try
+            {
+                StudentInfoClass.Program = cboProgram.Text;
+                StudentInfoClass.FirstName = txtFirstName.Text;
+                StudentInfoClass.LastName = txtLastName.Text;
+                StudentInfoClass.MiddleName = txtMiddleName.Text;
+                StudentInfoClass.Birthday = datePickerBirtday.Text;
+                StudentInfoClass.Gender = cbGender.Text;
 
-            StudentInfoClass.Age = long.TryParse(txtAge.Text, out long age) ? age : 0;
-            StudentInfoClass.ContactNo = long.TryParse(txtContactNo.Text, out long contact) ? contact : 0;
-            StudentInfoClass.StudentNo = long.TryParse(txtStudentNo.Text, out long studNo) ? studNo : 0;
+                StudentInfoClass.Age = long.TryParse(txtAge.Text, out long age) ? age : 0;
+                StudentInfoClass.ContactNo = long.TryParse(txtContactNo.Text, out long contact) ? contact : 0;
+                StudentInfoClass.StudentNo = long.TryParse(txtStudentNo.Text, out long studNo) ? studNo : 0;
+            }
 
+            catch (FormatException)
+            {
+                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            catch (IndexOutOfRangeException)
+            {
+                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            finally {
+                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number. ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
             // Open FrmConfirm as dialog
             FrmConfirm frm = new FrmConfirm();
             if (frm.ShowDialog() == DialogResult.OK)
