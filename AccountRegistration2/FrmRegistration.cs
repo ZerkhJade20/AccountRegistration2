@@ -5,13 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AccountRegistration2
 {
     public partial class FrmRegistration : Form
     {
+        private string _FullName;
+        private int _Age;
+        private long _ContactNo;
+        private long _StudentNo;
         public FrmRegistration()
         {
             InitializeComponent();
@@ -88,7 +94,7 @@ namespace AccountRegistration2
             FrmConfirm frm = new FrmConfirm();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Enrolled kana!", "Success");
+                MessageBox.Show("Enrolled kana! SOlID!", "Success");
             }
         }
 
@@ -104,6 +110,48 @@ namespace AccountRegistration2
 
         private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public long StudentNumber(string studNum)
+        {
+
+            _StudentNo = long.Parse(studNum);
+
+            return _StudentNo;
+        }
+
+        public long ContactNo(string Contact)
+        {
+            if (Regex.IsMatch(Contact, @"^[0-9]{10,11}$"))
+            {
+                _ContactNo = long.Parse(Contact);
+            }
+
+            return _ContactNo;
+        }
+
+        public string FullName(string LastName, string FirstName, string MiddleInitial)
+        {
+            if (Regex.IsMatch(LastName, @"^[a-zA-Z]+$") || Regex.IsMatch(FirstName, @"^[a-zA-Z]+$") || Regex.IsMatch(MiddleInitial, @"^[a-zA-Z]+$"))
+            {
+                _FullName = LastName + ", " + FirstName + ", " + MiddleInitial;
+            }
+
+            return _FullName;
+        }
+
+        public int Age(string age)
+        {
+            if (Regex.IsMatch(age, @"^[0-9]{1,3}$"))
+            {
+                _Age = Int32.Parse(age);
+            }
+
+            return _Age;
         }
     }
 }

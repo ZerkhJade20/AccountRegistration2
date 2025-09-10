@@ -165,6 +165,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(152, 20);
             this.txtLastName.TabIndex = 9;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // txtFirstName
             // 

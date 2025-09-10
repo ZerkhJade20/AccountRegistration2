@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -82,40 +80,16 @@
             this.label3.Location = new System.Drawing.Point(21, 83);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Last Name:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(21, 113);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "First Name:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(21, 149);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Middle Name:";
+            this.label3.Text = "Name:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(21, 182);
+            this.label6.Location = new System.Drawing.Point(22, 110);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 13);
@@ -127,7 +101,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(21, 264);
+            this.label7.Location = new System.Drawing.Point(22, 192);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
@@ -139,7 +113,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(21, 240);
+            this.label8.Location = new System.Drawing.Point(22, 168);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
@@ -152,7 +126,7 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.BackColor = System.Drawing.Color.Transparent;
             this.lblAddress.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAddress.Location = new System.Drawing.Point(127, 240);
+            this.lblAddress.Location = new System.Drawing.Point(128, 168);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(0, 13);
@@ -163,7 +137,7 @@
             this.cbGender.AutoSize = true;
             this.cbGender.BackColor = System.Drawing.Color.Transparent;
             this.cbGender.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cbGender.Location = new System.Drawing.Point(127, 211);
+            this.cbGender.Location = new System.Drawing.Point(128, 139);
             this.cbGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(0, 13);
@@ -174,7 +148,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.BackColor = System.Drawing.Color.Transparent;
             this.lblAge.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAge.Location = new System.Drawing.Point(127, 182);
+            this.lblAge.Location = new System.Drawing.Point(128, 110);
             this.lblAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(0, 13);
@@ -185,7 +159,7 @@
             this.lblMiddleName.AutoSize = true;
             this.lblMiddleName.BackColor = System.Drawing.Color.Transparent;
             this.lblMiddleName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMiddleName.Location = new System.Drawing.Point(127, 149);
+            this.lblMiddleName.Location = new System.Drawing.Point(193, 83);
             this.lblMiddleName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMiddleName.Name = "lblMiddleName";
             this.lblMiddleName.Size = new System.Drawing.Size(0, 13);
@@ -196,7 +170,7 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblFirstName.Location = new System.Drawing.Point(127, 113);
+            this.lblFirstName.Location = new System.Drawing.Point(128, 83);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(0, 13);
@@ -207,7 +181,7 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
             this.lblLastName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLastName.Location = new System.Drawing.Point(127, 83);
+            this.lblLastName.Location = new System.Drawing.Point(222, 83);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(0, 13);
@@ -252,7 +226,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(21, 211);
+            this.label9.Location = new System.Drawing.Point(22, 139);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
@@ -265,7 +239,7 @@
             this.lblContactNo.AutoSize = true;
             this.lblContactNo.BackColor = System.Drawing.Color.Transparent;
             this.lblContactNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblContactNo.Location = new System.Drawing.Point(127, 264);
+            this.lblContactNo.Location = new System.Drawing.Point(128, 192);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.Size = new System.Drawing.Size(0, 13);
             this.lblContactNo.TabIndex = 18;
@@ -292,8 +266,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -311,8 +283,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
