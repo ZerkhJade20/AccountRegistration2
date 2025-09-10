@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AccountRegistration2
 {
-    public partial class Form1 : Form
+    public partial class FrmRegistration : Form
     {
-        public Form1()
+        public FrmRegistration()
         {
             InitializeComponent();
             // Fill combobox with sample college courses
@@ -47,6 +47,15 @@ namespace AccountRegistration2
             // Optional: Select first item by default
             if (cboProgram.Items.Count > 0)
                 cboProgram.SelectedIndex = 0;
+
+            cbGender.Items.AddRange(new string[]
+            {
+                "Male",
+                "Female",
+
+            });
+            if (cbGender.Items.Count > 0)
+                cbGender.SelectedIndex = 0;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -68,7 +77,8 @@ namespace AccountRegistration2
             StudentInfoClass.FirstName = txtFirstName.Text;
             StudentInfoClass.LastName = txtLastName.Text;
             StudentInfoClass.MiddleName = txtMiddleName.Text;
-            StudentInfoClass.Address = txtAddress.Text;
+            StudentInfoClass.Birthday = datePickerBirtday.Text;
+            StudentInfoClass.Gender = cbGender.Text;
 
             StudentInfoClass.Age = long.TryParse(txtAge.Text, out long age) ? age : 0;
             StudentInfoClass.ContactNo = long.TryParse(txtContactNo.Text, out long contact) ? contact : 0;
@@ -78,8 +88,22 @@ namespace AccountRegistration2
             FrmConfirm frm = new FrmConfirm();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Registration confirmed!", "Success");
+                MessageBox.Show("Enrolled kana!", "Success");
             }
+        }
+
+        private void datePickerBirtday_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContactNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
