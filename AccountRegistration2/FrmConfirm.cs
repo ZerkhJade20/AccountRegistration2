@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace AccountRegistration2
 {
@@ -56,6 +59,30 @@ namespace AccountRegistration2
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+            try
+            {
+                SqlConnection con = new SqlConnection("Data Source=SQLEXPRESS;Initial Catalog=Registration;Integrated Security=True;Trust Server Certificate=True");
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Registration]\r\n           
+            ([StudentNo]\r\n           
+            ,[LastName]\r\n           
+            ,[FirstName]\r\n           
+            ,[MiddleName]\r\n           
+            ,[Age]\r\n           
+            ,[Birthday]\r\n           
+            ,[ContactNo]\r\n          
+            ,[Program]\r\n           
+            ,[Gender])\r\n     
+            VALUES\r\n          
+                ('" + lblStudentNo.Text + "', '" + lblLastName.Text + "', '" + lblMiddleName.Text + "', '" + lblFirstName.Text + "', '" + lblAge.Text + "', '" + lblContactNo.Text + "', '" + cbGender.ToString() + "', '" + lblProgram.ToString() + "', '" + lblAddress.ToString() + "')", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Register Successfully");
+            }
+            catch (Exception ex) 
+            {
+            }
+
         }
 
 

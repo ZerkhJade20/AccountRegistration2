@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace AccountRegistration2
 {
     public partial class FrmRegistration : Form
@@ -81,55 +82,55 @@ namespace AccountRegistration2
             // Assign textbox/combobox values to static variables
             try
             {
-                StudentInfoClass.Program = cboProgram.Text;
-                StudentInfoClass.FirstName = txtFirstName.Text;
-                StudentInfoClass.LastName = txtLastName.Text;
-                StudentInfoClass.MiddleName = txtMiddleName.Text;
-                StudentInfoClass.Birthday = datePickerBirtday.Text;
-                StudentInfoClass.Gender = cbGender.Text;
+                StudentInfoClass.Program = cboProgram.Text ?? throw new ArgumentNullException(nameof(cboProgram));
+                StudentInfoClass.FirstName = txtFirstName.Text ?? throw new ArgumentNullException(nameof(txtFirstName));
+                StudentInfoClass.LastName = txtLastName.Text ?? throw new ArgumentNullException(nameof(txtLastName));
+                StudentInfoClass.MiddleName = txtMiddleName.Text ?? throw new ArgumentNullException(nameof(txtMiddleName));
+                StudentInfoClass.Birthday = datePickerBirtday.Text ?? throw new ArgumentNullException(nameof(datePickerBirtday));
+                StudentInfoClass.Gender = cbGender.Text ?? throw new ArgumentNullException(nameof(cbGender));
 
-                StudentInfoClass.Age = long.TryParse(txtAge.Text, out long age) ? age : 0;
-                StudentInfoClass.ContactNo = long.TryParse(txtContactNo.Text, out long contact) ? contact : 0;
-                StudentInfoClass.StudentNo = long.TryParse(txtStudentNo.Text, out long studNo) ? studNo : 0;
+                StudentInfoClass.Age = long.Parse(txtAge.Text);
+                StudentInfoClass.ContactNo = long.Parse(txtContactNo.Text);
+                StudentInfoClass.StudentNo = long.Parse(txtStudentNo.Text);
             }
-
-            catch (FormatException)
+            catch (ArgumentNullException ex)
             {
-                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Missing required input: {ex.ParamName}",
+                    "Null Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            catch (ArgumentNullException)
+            catch (FormatException)
             {
-                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please input valid numbers for Student Number, Age, and Contact Number.",
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             catch (OverflowException)
             {
-                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The number entered is too large or too small.",
+                    "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-
-            catch (IndexOutOfRangeException)
-            {
-                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Please input numbers only for Student Number, Age, and Contact Number", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Unexpected error: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            finally {
-                MessageBox.Show("Please input numbers only for Student Number, Age, and Contact Number. ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+            finally
+            {
+                MessageBox.Show("Validation attempt completed.",
+                    "Process Finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            // Open FrmConfirm as dialog
             FrmConfirm frm = new FrmConfirm();
+
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show("Enrolled kana! SOlID!", "Success");
             }
+
+
+
         }
 
         private void datePickerBirtday_ValueChanged(object sender, EventArgs e)
